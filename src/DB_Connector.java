@@ -8,6 +8,8 @@ public class DB_Connector {
     //  JDBC driver
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     //  The url = jdbc:dbms//host name:port#/db name
+
+    //Husk at tjekke IP fra erik PC.
     private static String url = "jdbc:mysql://10.200.128.46:3306/";
     //  User name
     private static String user = "root";
