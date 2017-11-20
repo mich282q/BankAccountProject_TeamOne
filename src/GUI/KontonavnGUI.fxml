@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="34.0" layoutY="14.0" prefHeight="60.0" prefWidth="158.0" text="Kontoejer">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="118.0" prefHeight="24.0" prefWidth="90.0" text="Kontier:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="76.0" prefHeight="25.0" prefWidth="75.0" text="Overfør fra:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="489.0" layoutY="75.0" mnemonicParsing="false" text="Konto">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="489.0" layoutY="142.0" mnemonicParsing="false" text="Konto">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Label layoutX="377.0" layoutY="142.0" prefHeight="25.0" prefWidth="75.0" text="Overfør til:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="232.0" prefHeight="24.0" prefWidth="64.0" text="Beløb:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="437.0" layoutY="232.0" prefHeight="31.0" prefWidth="158.0" text="kr." />
+      <Button layoutX="415.0" layoutY="300.0" mnemonicParsing="false" text="Gennemfør overførsel" />
+      <ListView layoutX="34.0" layoutY="163.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</Pane>
