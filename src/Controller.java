@@ -25,15 +25,12 @@ public class Controller {
 
 
     @FXML
-    private void handleButtonAction() {
-
-
+    private void handleButtonAction(javafx.event.ActionEvent e) {
+        if(e.getSource() == btnGennemfoerOverfoersel) {
             System.out.println("Knappen virker :-)");
 
+        }
 
     }
-
-
-
 
 }

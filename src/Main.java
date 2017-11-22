@@ -12,7 +12,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
 
-        System.out.println("Hello Team One!");
+        System.out.println("Nice job Team One!");
         //Connection con = DB_Connector.connect();
     }
 
