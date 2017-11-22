@@ -30,14 +30,14 @@
       </Label>
       <MenuButton layoutX="489.0" layoutY="75.0" mnemonicParsing="false" text="Konto">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" text="Lønkonto" />
+          <MenuItem mnemonicParsing="false" text="Opsparringskonto" />
         </items>
       </MenuButton>
       <MenuButton layoutX="489.0" layoutY="142.0" mnemonicParsing="false" text="Konto">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" text="Lønkonto" />
+          <MenuItem mnemonicParsing="false" text="Opsparingskonto" />
         </items>
       </MenuButton>
       <Label layoutX="377.0" layoutY="142.0" prefHeight="25.0" prefWidth="75.0" text="Overfør til:">
