@@ -50,7 +50,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="437.0" layoutY="232.0" prefHeight="31.0" prefWidth="158.0" />
+      <TextField fx:id="txtBeloeb" layoutX="437.0" layoutY="232.0" prefHeight="31.0" prefWidth="158.0" />
       <Button fx:id="btnGennemfoerOverfoersel" layoutX="415.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Gennemfør overførsel" />
       <ListView layoutX="213.0" layoutY="400.0" prefHeight="0.0" prefWidth="0.0" />
       <TableView layoutX="34.0" layoutY="106.0" prefHeight="226.0" prefWidth="295.0">
