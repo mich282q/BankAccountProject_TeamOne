@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label contentDisplay="TOP" layoutX="242.0" layoutY="14.0" prefHeight="32.0" prefWidth="123.0" text="Opsparing">
          <font>
@@ -30,7 +30,7 @@
         <columns>
           <TableColumn prefWidth="200.0" text="Reg. Nr." />
           <TableColumn prefWidth="200.0" text="Konto Nr." />
-            <TableColumn prefWidth="200.0" text="Reg. Nr." />
+            <TableColumn prefWidth="200.0" />
         </columns>
       </TableView>
       <TableView layoutY="158.0" prefHeight="84.0" prefWidth="600.0">
