@@ -25,13 +25,12 @@ public class Controller {
 
 
     @FXML
-    private void handleButtonAction(ActionEvent e) {
-        int num1;
+    private void handleButtonAction() {
 
-        if(e.getSource()== btnGennemfoerOverfoersel) {
+
             System.out.println("Knappen virker :-)");
-        }
-        num1=Integer.parseInt(txfBeloeb.getText());
+
+
     }
 
 
