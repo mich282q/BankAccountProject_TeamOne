@@ -11,7 +11,7 @@ public class Controller {
     @FXML
     private Button btnGennemfoerOverfoersel;
     @FXML
-    private TextField txfBeloeb;
+    private TextField txtBeloeb;
     @FXML
     private MenuItem miAction1; //Overfør fra
     @FXML
@@ -25,13 +25,17 @@ public class Controller {
 
 
     @FXML
-    private void handleButtonAction() {
+    private void handleButtonAction(javafx.event.ActionEvent e) {
+        int beloeb; //det indtastede beløb i textfield
 
-            System.out.println("Knappen virker :-)");
+        beloeb=Integer.parseInt(txtBeloeb.getText()); //Læser det beløb man har indtastet i beløbsfeltet
+
+        if(e.getSource() == btnGennemfoerOverfoersel) {
+            System.out.println("Knappen virker og der er sendt " + beloeb + " kr.");
+
+
+        }
 
     }
-
-
-
 
 }
