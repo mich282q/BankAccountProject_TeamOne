@@ -4,6 +4,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class Controller {
@@ -30,8 +31,11 @@ public class Controller {
 
         beloeb=Integer.parseInt(txtBeloeb.getText()); //Læser det beløb man har indtastet i beløbsfeltet
 
-        if(e.getSource() == btnGennemfoerOverfoersel) {
+        if(e.getSource() == btnGennemfoerOverfoersel) { //Køres hvis den valgte knap bliver valgt
             System.out.println("Knappen virker og der er sendt " + beloeb + " kr.");
+
+            JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Dit beløb på " + beloeb + "kr er " +
+                    "overført til den valgte konti."); //Pop-up vindue som sender en tekst
 
 
         }
