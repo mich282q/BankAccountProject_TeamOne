@@ -35,7 +35,7 @@ public class Controller {
             System.out.println("Knappen virker og der er sendt " + beloeb + " kr.");
 
             JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Dit beløb på " + beloeb + "kr er " +
-                    "overført til den valgte konti."); //Pop-up vindue som sender en tekst
+                    "overført til den valgte konto."); //Pop-up vindue som sender en tekst
 
 
         }
