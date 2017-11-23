@@ -19,30 +19,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        kontonavnGUI(primaryStage);
+        // Laver et objekt af klassen ÅbenVindue
+        ÅbenVindue åbenVindue = new ÅbenVindue();
+
+
+        åbenVindue.bankrådgiver(primaryStage);
 
     }
 
-    // Metode til at kalde på kontonavnGUI vinduet
-    public void kontonavnGUI(Stage primaryStage) {
-        try {
-            // Indlæser KontonavnGUI.fxml fil
-            Parent root = FXMLLoader.load(getClass().getResource("GUI/KontonavnGUI.fxml"));
-
-            // Laver en scene med FXML filen
-            Scene scene = new Scene(root);
-
-            // Sætter vinduet titel til Kontoejer
-            primaryStage.setTitle("Kontoejer");
-            // Sætter scenen
-            primaryStage.setScene(scene);
-            // Viser den
-            primaryStage.show();
-
-
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 }
