@@ -23,14 +23,15 @@ DROP TABLE IF EXISTS `konto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `konto` (
-  `type` varchar(45) NOT NULL,
+  `type` varchar(45) DEFAULT NULL,
   `reg_nr` int(11) DEFAULT NULL,
   `konto_nr` int(11) DEFAULT NULL,
   `rentesats` int(11) DEFAULT NULL,
   `saldo` int(11) DEFAULT NULL,
   `overtraeksgebyr` int(11) DEFAULT NULL,
   `overtraek` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`type`)
+  `id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-23 13:58:24
+-- Dump completed on 2017-11-23 14:19:25
