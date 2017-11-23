@@ -19,7 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Indlæser en fxml fil
+            // Indlæser KontonavnGUI.fxml fil
             Parent root = FXMLLoader.load(getClass().getResource("GUI/KontonavnGUI.fxml"));
 
             // Laver en scene med FXML filen
@@ -31,6 +31,8 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             // Viser den
             primaryStage.show();
+
+
 
         } catch (IOException ex) {
             ex.printStackTrace();
