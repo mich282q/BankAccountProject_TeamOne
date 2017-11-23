@@ -18,6 +18,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        kontonavnGUI(primaryStage);
+
+    }
+
+    // Metode til at kalde på kontonavnGUI vinduet
+    public void kontonavnGUI(Stage primaryStage) {
         try {
             // Indlæser KontonavnGUI.fxml fil
             Parent root = FXMLLoader.load(getClass().getResource("GUI/KontonavnGUI.fxml"));
@@ -37,6 +44,5 @@ public class Main extends Application {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
     }
 }
