@@ -23,7 +23,7 @@ public class Main extends Application {
         ÅbenVindue åbenVindue = new ÅbenVindue();
 
 
-        åbenVindue.bankrådgiver(primaryStage);
+        åbenVindue.kontonavnGUI(primaryStage);
 
     }
 
