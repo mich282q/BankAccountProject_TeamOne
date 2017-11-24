@@ -10,11 +10,11 @@ public class DB_Connector {
     //  The url = jdbc:dbms//host name:port#/db name
 
     //Husk at tjekke IP fra erik PC.
-    private static String url = "jdbc:mysql://127.0.0.1:3306/";
+    private static String url = "jdbc:mysql://localhost:3306/";
     //  User name
     private static String user = "root";
     // Password
-    private static String password = "xmeto123";
+    private static String password = "12345678";
 
     public static Connection connect() {
         System.out.println("\n--Connecting to MySQL JDBC--");
@@ -48,13 +48,4 @@ public class DB_Connector {
         return con;
     }
 }
-
-
-
-
-
-
-
-
-
 
