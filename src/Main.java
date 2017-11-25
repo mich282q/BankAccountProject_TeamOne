@@ -6,14 +6,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Main extends Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         //launch(args);
 
         System.out.println("Nice job Team One!");
-        Connection con = DB_Connector.connect();
+        //DB_Connector.connect();
+
+        Bruger.lavBruger("Erik", "Random Adresse", 3);
 
         // Afslutter programmet efter testen er kørt
         System.exit(0);
