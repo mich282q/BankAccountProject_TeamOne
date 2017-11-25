@@ -16,7 +16,7 @@ public class Main extends Application {
         System.out.println("Nice job Team One!");
         //DB_Connector.connect();
 
-        Bruger.lavBruger("Erik", "Random Adresse", 3);
+        Bruger.lavBruger(1, "Erik", "Random Adresse");
 
         // Afslutter programmet efter testen er kørt
         System.exit(0);
