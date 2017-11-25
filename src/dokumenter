@@ -12,4 +12,12 @@ https://fronter.com/easj/main.phtml
 koden til at hente alle person i database
 select * from bruger
 
+Foreign Key
+
+select * from konto
+
+inner join bruger
+
+on person_id = id;
+
 

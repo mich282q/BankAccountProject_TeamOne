@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `bruger`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bruger` (
+  `Person_id` int(11) NOT NULL,
   `navn` varchar(45) DEFAULT NULL,
   `adresse` varchar(45) DEFAULT NULL,
-  `id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`Person_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-23 14:19:25
+-- Dump completed on 2017-11-25 20:08:16
