@@ -4,7 +4,9 @@ import java.sql.Statement;
 
 public class DB_Statements {
 
-    public DB_Statements() {
-    }
+    static Connection con = DB_Connector.connect();
+    static Statement stmt = null;
+
+
 
 }

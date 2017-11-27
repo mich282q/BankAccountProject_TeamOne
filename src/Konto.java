@@ -19,7 +19,6 @@ public class Konto {
         System.out.println(sql);
         stmt.execute(sql);
         System.out.println("Successful!");
-
     }
 
     public static void insertKontoData() throws SQLException {
@@ -41,6 +40,29 @@ public class Konto {
 
 
 
+    }
+
+    public void insertData(String tableName) {
+        //SQL query
+        String query = "insert into " + tableName + "(" +
+                "saldo) " +
+                "values (50000), " +
+                "(60000)," +
+                "(10000)";
+
+        //Måske det virker
+
+        try {
+            //Connect
+            stmt = con.createStatement();
+            //execute query
+            stmt.executeUpdate(query);
+            System.out.println("\n--Data inserted into table " + tableName + "--");
+        } catch (SQLException ex) {
+            //Handle exceptions
+            System.out.println("\n--Query did not execute--");
+            ex.printStackTrace();
+        }
     }
 
 }
