@@ -24,10 +24,10 @@ public class Bruger {
     public static void insertBrugerData() throws SQLException {
 
         lavBruger(1, "Erik Ruhmanis", "Troensevej");
-        lavBruger(2, "Thomas", "Parkvej");
-        lavBruger(3, "Mads", "Danavej");
-        lavBruger(4, "Daniel", "Femøvej");
-        lavBruger(5, "Burhan", "Maglemølle");
+        lavBruger(2, "Thomas Christensen", "Parkvej");
+        lavBruger(3, "Michael Trans", "Danavej");
+        lavBruger(4, "Daniel Nørd", "Femøvej");
+        lavBruger(5, "Burhan Öztürk", "Maglemølle");
 
     }
 }
