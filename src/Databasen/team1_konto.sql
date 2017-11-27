@@ -32,7 +32,7 @@ CREATE TABLE `konto` (
   `overtraek` varchar(45) DEFAULT NULL,
   `id` int(11) DEFAULT NULL,
   PRIMARY KEY (`konto_nr`),
-  KEY `Person_id` (`id`),
+  KEY `Person_id_idx` (`id`),
   CONSTRAINT `Person_id` FOREIGN KEY (`id`) REFERENCES `bruger` (`Person_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -43,6 +43,7 @@ CREATE TABLE `konto` (
 
 LOCK TABLES `konto` WRITE;
 /*!40000 ALTER TABLE `konto` DISABLE KEYS */;
+INSERT INTO `konto` VALUES ('Opsparingskonto',7845,258748965,1,500000,2000,'Nej',4),('Opsparingskonto',6985,264874259,1,600000,1200,'Nej',2),('Opsparingskonto',3698,478514789,1,600000,1000,'Nej',3),('Opsparingskonto',1457,547891203,1,250000,1200,'Nej',1),('Lønkonto',3652,568465125,1,100000,1200,'Ja',1),('Lønkonto',213,582102093,1,35000,1200,'Ja',5),('Lønkonto',1520,697564654,1,20000,500,'Ja',4),('Lønkonto',8748,698551789,2,10000,1500,'Ja',2),('Lønkonto',5874,748547989,1,41000,500,'Ja',3),('Opsparingskonto',8745,754864896,1,700000,1500,'Nej',5);
 /*!40000 ALTER TABLE `konto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-27 11:16:55
+-- Dump completed on 2017-11-27 11:38:28

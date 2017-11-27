@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `bruger`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bruger` (
-  `Person_id` int(11) NOT NULL AUTO_INCREMENT,
+  `Person_id` int(11) NOT NULL,
   `fnavn` varchar(45) DEFAULT NULL,
   `lnavn` varchar(45) DEFAULT NULL,
   `adresse` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Person_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `bruger` (
 
 LOCK TABLES `bruger` WRITE;
 /*!40000 ALTER TABLE `bruger` DISABLE KEYS */;
+INSERT INTO `bruger` VALUES (1,'Erik','Ruhmanis','Troensevej'),(2,'Thomas','Christensen','Parkvej'),(3,'Michael','Trans','Danavej'),(4,'Daniel','Nørd','Femøvej'),(5,'Burhan','Öztürk','Maglemølle');
 /*!40000 ALTER TABLE `bruger` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-27 11:16:55
+-- Dump completed on 2017-11-27 11:38:28
