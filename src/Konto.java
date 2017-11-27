@@ -8,13 +8,13 @@ public class Konto {
     static Statement stmt = null;
 
     //Laver en bruger med navn, adresse og id
-    public static void lavKonto(String konto_type, int reg_nr, int konto_nr, double rentesats,
+    public static void lavKonto(String Konto_type, int reg_nr, int konto_nr, double rentesats,
                                 int saldo, int overtraeksgebyr, String overtraek, int id) throws SQLException {
 
         System.out.println("Creating statement...");
         stmt = con.createStatement();
         String sql;
-        sql = "INSERT INTO bruger VALUES ('" + konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
+        sql = "INSERT INTO bruger VALUES ('" + Konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
                 + ", " + saldo + ", " + overtraeksgebyr + ", '"+ overtraek + "', "+ id +" );";
         System.out.println(sql);
         stmt.execute(sql);
