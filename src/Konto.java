@@ -50,7 +50,7 @@ public class Konto {
                 "(60000)," +
                 "(10000)";
 
-        //Måske det virker
+
 
         try {
             //Connect
