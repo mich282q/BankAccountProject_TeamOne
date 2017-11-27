@@ -14,7 +14,7 @@ public class Konto {
         System.out.println("Creating statement...");
         stmt = con.createStatement();
         String sql;
-        sql = "INSERT INTO konto VALUES ('" + Konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
+        sql = "INSERT INTO konto VALUES  ('" + Konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
                 + ", " + saldo + ", " + overtraeksgebyr + ", '"+ overtraek + "', "+ id +" );";
         System.out.println(sql);
         stmt.execute(sql);
