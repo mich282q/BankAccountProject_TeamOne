@@ -22,12 +22,19 @@ public class Konto {
 
     }
 
-    public static void insertKontoData() throws Exception {
+    public static void insertKontoData() throws SQLException {
 
         lavKonto("Lønkonto", 3652, 568465125,1,100000,1200,"Ja",1);
         lavKonto("Opsparingskonto", 1457, 547891203, 1.2, 250000, 1200,"Nej",2);
         lavKonto("Opsparingskonto", 6985, 264874259, 1.1, 600000, 1200, "Nej", 3);
         lavKonto("Lønkonto", 8748, 698551789, 1.8, 10000, 1500, "Ja", 4);
+        lavKonto("Lønkonto", 5874, 748547989, 1.3, 41000, 500, "Ja", 5);
+        lavKonto("Opsparingskonto", 3698, 478514789, 1.2, 600000, 1000, "Nej", 6);
+        lavKonto("Opsparingskonto", 7845, 258748965, 1.4, 500000, 2000, "Nej", 7);
+        lavKonto("Opsparingskonto", 8745, 754864896, 1.3, 700000, 1500, "Nej", 8);
+        lavKonto("Lønkonto", 1520, 697564654, 1, 20000, 500, "Ja",9);
+        lavKonto("Lønkonto", 0325, 013269458, 1.1, 35000, 1200, "Ja", 10);
+
 
     }
 
