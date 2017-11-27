@@ -18,9 +18,11 @@ public class Main extends Application {
 
         Bruger.insertBrugerData();
 
+        Konto.insertKontoData();
         // Afslutter programmet efter testen er kørt
         System.exit(0);
     }
+
 
     @Override
     public void start(Stage primaryStage) {

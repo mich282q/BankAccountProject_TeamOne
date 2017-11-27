@@ -8,12 +8,12 @@ public class Bruger {
     static Statement stmt = null;
 
     // Laver en bruger med navn, adresse og id
-    public static void lavBruger(int person_id, String navn, String adresse) throws SQLException {
+    public static void lavBruger(String fnavn,String lnavn, String adresse) throws SQLException {
 
         System.out.println("Creating statement...");
         stmt = con.createStatement();
         String sql;
-        sql = "INSERT INTO bruger VALUES (" + person_id + ", '" + navn + "', '" + adresse + "');";
+        sql = "INSERT INTO bruger (fnavn,lnavn, adresse) VALUES ('" + fnavn + "', '" + lnavn + "', '" + adresse + "');";
         System.out.println(sql);
         stmt.execute(sql);
         System.out.println("Successful!");
@@ -23,11 +23,11 @@ public class Bruger {
 
     public static void insertBrugerData() throws SQLException {
 
-        lavBruger(1, "Erik Ruhmanis", "Troensevej");
-        lavBruger(2, "Thomas Christensen", "Parkvej");
-        lavBruger(3, "Michael Trans", "Danavej");
-        lavBruger(4, "Daniel Nørd", "Femøvej");
-        lavBruger(5, "Burhan Öztürk", "Maglemølle");
+        lavBruger( "Erik", "Ruhmanis", "Troensevej");
+        lavBruger("Thomas", "Christensen", "Parkvej");
+        lavBruger( "Michael", "Trans", "Danavej");
+        lavBruger( "Daniel", "Nørd", "Femøvej");
+        lavBruger( "Burhan", "Öztürk", "Maglemølle");
 
     }
 }
