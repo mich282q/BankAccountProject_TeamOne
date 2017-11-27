@@ -19,7 +19,6 @@ public class Konto {
         System.out.println(sql);
         stmt.execute(sql);
         System.out.println("Successful!");
-
     }
 
     public static void insertKontoData() throws SQLException {
