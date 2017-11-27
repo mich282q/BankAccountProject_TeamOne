@@ -42,7 +42,7 @@ public class Konto {
 
     }
 
-    public void insertData(String tableName) {
+    public void insertSaldoData(String tableName) {
         //SQL query
         String query = "insert into " + tableName + "(" +
                 "saldo) " +

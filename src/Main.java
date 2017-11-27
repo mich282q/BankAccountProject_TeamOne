@@ -21,6 +21,11 @@ public class Main extends Application {
         Konto.insertKontoData();
         // Afslutter programmet efter testen er kørt
         System.exit(0);
+
+        Konto stmts = new Konto();
+        stmts.insertSaldoData("konto");
+
+
     }
 
 
@@ -34,5 +39,7 @@ public class Main extends Application {
         //åbenVindue.kontonavnGUI(primaryStage);
 
     }
+
+
 
 }
