@@ -33,7 +33,7 @@ public class Konto {
         lavKonto("Opsparingskonto", 7845, 258748965, 1.4, 500000, 2000, "Nej", 7);
         lavKonto("Opsparingskonto", 8745, 754864896, 1.3, 700000, 1500, "Nej", 8);
         lavKonto("Lønkonto", 1520, 697564654, 1, 20000, 500, "Ja",9);
-        lavKonto("Lønkonto", 0325, 013269458, 1.1, 35000, 1200, "Ja", 10);
+        lavKonto("Lønkonto", 0325, 582102093, 1.1, 35000, 1200, "Ja", 10);
 
 
     }
