@@ -31,7 +31,8 @@ CREATE TABLE `konto` (
   `overtraeksgebyr` int(11) DEFAULT NULL,
   `overtraek` tinyint(4) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  CONSTRAINT `Person_id` FOREIGN KEY (`id`) REFERENCES `bruger` (`Person_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-23 14:19:25
+-- Dump completed on 2017-11-25 20:08:15

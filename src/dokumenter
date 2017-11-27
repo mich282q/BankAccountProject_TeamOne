@@ -7,9 +7,20 @@ https://docs.google.com/document/d/1BVjfi56kinpJiKYCBsRwnZo6OQVgOdaBluiKBNH01hw/
 Fronter
 https://fronter.com/easj/main.phtml
 
+trello
+https://trello.com/b/QS2GfST1/team-1-bank-account-project
+
 
 
 koden til at hente alle person i database
 select * from bruger
+
+Foreign Key
+
+select * from konto
+
+inner join bruger
+
+on person_id = id;
 
 

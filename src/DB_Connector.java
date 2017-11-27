@@ -7,10 +7,9 @@ public class DB_Connector {
     private static Connection con = null;
     //  JDBC driver
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    //  The url = jdbc:dbms//host name:port#/db name
 
-    //Husk at tjekke IP fra erik PC.
-    private static String url = "jdbc:mysql://localhost:3306/";
+    //  The url = jdbc:dbms//host name:port#/db name
+    private static String url = "jdbc:mysql://localhost:3306/team1";
     //  User name
     private static String user = "root";
     // Password
