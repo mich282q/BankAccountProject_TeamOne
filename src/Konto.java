@@ -22,7 +22,7 @@ public class Konto {
 
     }
 
-    public static void insertKontoData() throws Exception {
+    public static void insertKontoData() throws SQLException {
 
         lavKonto("Lønkonto", 3652, 568465125,1,100000,1200,"Ja",1);
         lavKonto("Opsparingskonto", 1457, 547891203, 1.2, 250000, 1200,"Nej",2);
