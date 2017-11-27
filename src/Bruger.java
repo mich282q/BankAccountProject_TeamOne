@@ -8,12 +8,12 @@ public class Bruger {
     static Statement stmt = null;
 
     // Laver en bruger med navn, adresse og id
-    public static void lavBruger(int id, String navn, String adresse) throws SQLException {
+    public static void lavBruger(int Person_id, String navn, String adresse) throws SQLException {
 
         System.out.println("Creating statement...");
         stmt = con.createStatement();
         String sql;
-        sql = "INSERT INTO bruger VALUES (" + id + ", '" + navn + "', '" + adresse + "');";
+        sql = "INSERT INTO bruger VALUES (" + Person_id + ", '" + navn + "', '" + adresse + "');";
         System.out.println(sql);
         stmt.execute(sql);
         System.out.println("Successful!");
