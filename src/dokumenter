@@ -15,6 +15,7 @@ https://trello.com/b/QS2GfST1/team-1-bank-account-project
 koden til at hente alle person i database
 select * from bruger
 
+
 Foreign Key
 
 select * from konto
