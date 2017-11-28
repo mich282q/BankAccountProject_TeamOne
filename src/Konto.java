@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -10,15 +11,32 @@ public class Konto {
     // Metode til at lave kontoer med konto_type, reg_nr, konto_nr, rentesats, saldo, overtræksgebyr og id
     public static void lavKonto(String Konto_type, int reg_nr, int konto_nr, double rentesats,
                                 int saldo, int overtraeksgebyr, String overtraek, int id) throws SQLException {
-
-        System.out.println("Creating statement...");
-        stmt = con.createStatement();
+        // Initialiserer varibler der skal bruges
         String sql;
-        sql = "INSERT INTO konto VALUES  ('" + Konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
-                + ", " + saldo + ", " + overtraeksgebyr + ", '"+ overtraek + "', "+ id +" );";
-        System.out.println(sql);
-        stmt.execute(sql);
-        System.out.println("Successful!");
+        int hentet_reg_nr = 0;
+        int hentet_konto_nr = 0;
+
+        // Henter et reg_nr og konto_nr fra konto tabelen hvor reg_nr er reg_nr variablen og konto_nr er konto_nr variablen
+        stmt = con.createStatement();
+        sql = "SELECT reg_nr, konto_nr FROM konto WHERE reg_nr = " + reg_nr + " AND konto_nr = " + konto_nr;
+        ResultSet rs = stmt.executeQuery(sql);
+        if (rs.next())   { // Indsætter reg_nr i hentet_reg_nr og konto_nr i hentet_konto_nr hvis den har hentet det
+            hentet_reg_nr = rs.getInt("reg_nr");
+            hentet_konto_nr = rs.getInt("konto_nr");
+        }
+
+        if (hentet_reg_nr == reg_nr && hentet_konto_nr == konto_nr) {
+            System.out.println("Konto med reg_nr: " + reg_nr + " og konto_nr: " + konto_nr + " findes allerede!");
+        }
+        else {
+            System.out.println("Creating statement...");
+            stmt = con.createStatement();
+            sql = "INSERT INTO konto VALUES  ('" + Konto_type + "', " + reg_nr + ", " + konto_nr + ", " + rentesats
+                    + ", " + saldo + ", " + overtraeksgebyr + ", '" + overtraek + "', " + id + " );";
+            System.out.println(sql);
+            stmt.execute(sql);
+            System.out.println("Successful!");
+        }
     }
 
     // Metode til at lave flere forskellige kontoer
@@ -38,8 +56,6 @@ public class Konto {
 
         lavKonto("Lønkonto", 0325, 582102093, 1.1, 35000, 1200, "Ja", 5);
         lavKonto("Opsparingskonto", 8745, 754864896, 1.3, 700000, 1500, "Nej", 5);
-
-
 
     }
 

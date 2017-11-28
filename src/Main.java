@@ -18,7 +18,7 @@ public class Main extends Application {
 
         //Bruger.insertBrugerData();
 
-        //Konto.insertKontoData();
+        Konto.insertKontoData();
 
 
         //Konto stmts = new Konto();
