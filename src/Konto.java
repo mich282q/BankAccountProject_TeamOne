@@ -59,13 +59,11 @@ public class Konto {
 
     }
 
-    public void insertSaldoData(String tableName) {
+    //Metode til at indsætte et nyt beløb på et bestemt reg_nr
+    public void insertSaldoData(int beloeb, int reg_nr) {
         //SQL query
-        String query = "insert into " + tableName + "(" +
-                "saldo) " +
-                "values (50000), " +
-                "(60000)," +
-                "(10000)";
+        String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
+
 
 
 
@@ -74,7 +72,7 @@ public class Konto {
             stmt = con.createStatement();
             //execute query
             stmt.executeUpdate(query);
-            System.out.println("\n--Data inserted into table " + tableName + "--");
+            System.out.println("\n--Transfered money: " + beloeb + "--");
         } catch (SQLException ex) {
             //Handle exceptions
             System.out.println("\n--Query did not execute--");
