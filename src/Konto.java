@@ -7,7 +7,7 @@ public class Konto {
     static Connection con = DB_Connector.connect();
     static Statement stmt = null;
 
-    //Laver en bruger med navn, adresse og id
+    // Metode til at lave kontoer med konto_type, reg_nr, konto_nr, rentesats, saldo, overtræksgebyr og id
     public static void lavKonto(String Konto_type, int reg_nr, int konto_nr, double rentesats,
                                 int saldo, int overtraeksgebyr, String overtraek, int id) throws SQLException {
 
@@ -21,6 +21,7 @@ public class Konto {
         System.out.println("Successful!");
     }
 
+    // Metode til at lave flere forskellige kontoer
     public static void insertKontoData() throws SQLException {
 
         lavKonto("Lønkonto", 3652, 568465125,1,100000,1200,"Ja",1);

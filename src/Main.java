@@ -14,17 +14,17 @@ public class Main extends Application {
         //launch(args);
 
         System.out.println("Nice job Team One!");
-        DB_Connector.connect();
 
-        Bruger.insertBrugerData();
 
-        Konto.insertKontoData();
-        // Afslutter programmet efter testen er kørt
+        //Bruger.insertBrugerData();
+
+        //Konto.insertKontoData();
 
 
         //Konto stmts = new Konto();
         //stmts.insertSaldoData("konto");
 
+        // Afslutter programmet efter testen er kørt
         System.exit(0);
     }
 
