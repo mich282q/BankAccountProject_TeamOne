@@ -16,7 +16,7 @@ public class Main extends Application {
         System.out.println("Nice job Team One!");
 
 
-        //Bruger.insertBrugerData();
+        Bruger.insertBrugerData();
 
         Konto.insertKontoData();
 
