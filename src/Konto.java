@@ -62,10 +62,11 @@ public class Konto {
     }
 
     //Metode til at indsætte et nyt beløb på et bestemt reg_nr
-    public void insertSaldoData(int beloeb, int reg_nr) {
+    public void insertSaldoData(int beloeb, int konto_nr, int reg_nr, int konto_nr2, int reg_nr2) {
         //SQL query
-        String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
-
+        //String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
+        String query = "Update konto set saldo = saldo + " + beloeb + " where konto_nr = " + konto_nr;
+        String query2 = "Update konto set saldo = saldo - " + beloeb + " where konto_nr = " + konto_nr2;
 
 
 
@@ -74,7 +75,9 @@ public class Konto {
             stmt = con.createStatement();
             //execute query
             stmt.executeUpdate(query);
-            System.out.println("\n--Transfered money: " + beloeb + "kr to register number: " + reg_nr + "--");
+            stmt.executeUpdate(query2);
+            System.out.println("\n--Transfered money: " + beloeb + "kr to register number: " + reg_nr +
+                    " and konto number: " + konto_nr + "--");
         } catch (SQLException ex) {
             //Handle exceptions
             System.out.println("\n--Query did not execute--");
