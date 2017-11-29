@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
 public class Konto {
 
@@ -62,11 +63,17 @@ public class Konto {
     }
 
     //Metode til at indsætte et nyt beløb på et bestemt reg_nr
-    public void insertSaldoData(int beloeb, int konto_nr, int reg_nr, int konto_nr2, int reg_nr2) {
+    public void insertSaldoData(int konto_nr, int reg_nr, int konto_nr2, int reg_nr2) {
+        Scanner input = new Scanner(System.in);
+        int beloeb = input.nextInt();
+
         //SQL query
         //String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
-        String query = "Update konto set saldo = saldo + " + beloeb + " where konto_nr = " + konto_nr;
-        String query2 = "Update konto set saldo = saldo - " + beloeb + " where konto_nr = " + konto_nr2;
+        String query = "UPDATE konto set saldo = saldo + " + beloeb + " where konto_nr = " + konto_nr;
+        String query2 = "UPDATE konto set saldo = saldo - " + beloeb + " where konto_nr = " + konto_nr2;
+
+
+
 
 
 
