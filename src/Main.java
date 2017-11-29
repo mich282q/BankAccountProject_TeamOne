@@ -22,7 +22,9 @@ public class Main extends Application {
 
 
         Konto saldo = new Konto();
-        saldo.insertSaldoData();
+        //saldo.insertSaldoData();
+
+        saldo.insertMoney();
 
 
         // Afslutter programmet efter testen er kørt
