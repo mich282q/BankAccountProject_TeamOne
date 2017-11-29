@@ -22,7 +22,7 @@ public class Main extends Application {
 
 
         Konto saldo = new Konto();
-        //saldo.insertSaldoData();
+        saldo.insertSaldoData();
 
         saldo.insertMoney();
 
