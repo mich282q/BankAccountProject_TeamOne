@@ -83,9 +83,9 @@ public class Konto {
             //execute query
             stmt.executeUpdate(query);
             stmt.executeUpdate(query2);
-            System.out.println("\n--Overført penge: " + beloeb + "kr til registreringsnummer: " + reg_nr +
+            System.out.println("\n--Overført penge: " + beloeb + "kr til reg. nummer: " + reg_nr +
                     " og kontonummer: " + konto_nr + "--");
-            System.out.println("\n--Trukket penge: " + beloeb + "kr fra registreringsnummer: " + reg_nr2 +
+            System.out.println("\n--Trukket penge: " + beloeb + "kr fra reg. nummer: " + reg_nr2 +
             " og kontonummer: " + konto_nr2 + "--");
         } catch (SQLException ex) {
             //Handle exceptions
