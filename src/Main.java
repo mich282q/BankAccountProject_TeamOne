@@ -22,7 +22,7 @@ public class Main extends Application {
 
 
         Konto saldo = new Konto();
-        saldo.insertSaldoData(582102093, 5325, 697564654, 1520);
+        saldo.insertSaldoData();
 
 
         // Afslutter programmet efter testen er kørt

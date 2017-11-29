@@ -63,9 +63,16 @@ public class Konto {
     }
 
     //Metode til at indsætte et nyt beløb på et bestemt reg_nr
-    public void insertSaldoData(int konto_nr, int reg_nr, int konto_nr2, int reg_nr2) {
+    public void insertSaldoData() {
         Scanner input = new Scanner(System.in);
+        System.out.println("\nIndtast overførselsbeløb:");
         int beloeb = input.nextInt();
+        System.out.println("Indtast reg. nr og konto nr som skal have overført penge:");
+        int konto_nr = input.nextInt();
+        int reg_nr = input.nextInt();
+        System.out.println("Indtast reg. nr og konto nr som skal have trukket penge:");
+        int konto_nr2 = input.nextInt();
+        int reg_nr2 = input.nextInt();
 
         //SQL query
         //String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
