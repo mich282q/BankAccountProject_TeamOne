@@ -16,35 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `konto`
+-- Table structure for table `transactioner`
 --
 
-DROP TABLE IF EXISTS `konto`;
+DROP TABLE IF EXISTS `transactioner`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `konto` (
-  `Konto_type` varchar(45) DEFAULT NULL,
-  `reg_nr` int(11) DEFAULT NULL,
-  `konto_nr` int(11) NOT NULL,
-  `rentesats` int(11) DEFAULT NULL,
-  `saldo` int(11) DEFAULT NULL,
-  `overtraeksgebyr` int(11) DEFAULT NULL,
-  `overtraek` varchar(45) DEFAULT NULL,
-  `id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`konto_nr`),
-  KEY `Person_id_idx` (`id`),
-  CONSTRAINT `Person_id` FOREIGN KEY (`id`) REFERENCES `bruger` (`Person_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `transactioner` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Fra_Konto` int(11) DEFAULT NULL,
+  `Trukketbeløb` double DEFAULT NULL,
+  `Til_kontoNr` int(11) DEFAULT NULL,
+  `Indførtbeløb` double DEFAULT NULL,
+  `Timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `FK_Fra konto_idx` (`Fra_Konto`),
+  KEY `FK_Til_Konto_idx` (`Til_kontoNr`),
+  CONSTRAINT `FK_Fra_Konto` FOREIGN KEY (`Fra_Konto`) REFERENCES `konto` (`konto_nr`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_Til_Konto` FOREIGN KEY (`Til_kontoNr`) REFERENCES `konto` (`konto_nr`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `konto`
+-- Dumping data for table `transactioner`
 --
 
-LOCK TABLES `konto` WRITE;
-/*!40000 ALTER TABLE `konto` DISABLE KEYS */;
-INSERT INTO `konto` VALUES ('Opsparingskonto',7845,258748965,1,500000,0,'Nej',4),('Opsparingskonto',6985,264874259,1,600000,0,'Nej',2),('Opsparingskonto',3698,478514789,1,600000,0,'Nej',3),('Opsparingskonto',4052,547891250,1,250000,0,'Nej',1),('Lønkonto',4056,568465125,1,100000,1200,'Ja',1),('Lønkonto',3652,568465555,1,100000,1500,'Ja',1),('Opsparingskonto',1457,568465558,1,250000,0,'Nej',1),('Lønkonto',5325,582102093,1,35000,1500,'Ja',5),('Lønkonto',1520,697564654,1,20000,1000,'Ja',4),('Lønkonto',8748,698551789,2,10000,2000,'Ja',2),('Lønkonto',5874,748547989,1,41000,2500,'Ja',3),('Opsparingskonto',8745,754864896,1,700000,0,'Nej',5);
-/*!40000 ALTER TABLE `konto` ENABLE KEYS */;
+LOCK TABLES `transactioner` WRITE;
+/*!40000 ALTER TABLE `transactioner` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transactioner` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
