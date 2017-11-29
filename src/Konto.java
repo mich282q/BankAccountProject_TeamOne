@@ -76,8 +76,10 @@ public class Konto {
             //execute query
             stmt.executeUpdate(query);
             stmt.executeUpdate(query2);
-            System.out.println("\n--Transfered money: " + beloeb + "kr to register number: " + reg_nr +
-                    " and konto number: " + konto_nr + "--");
+            System.out.println("\n--Overført penge: " + beloeb + "kr til registreringsnummer: " + reg_nr +
+                    " og kontonummer: " + konto_nr + "--");
+            System.out.println("\n--Trukket penge: " + beloeb + "kr fra registreringsnummer: " + reg_nr2 +
+            " og kontonummer: " + konto_nr2 + "--");
         } catch (SQLException ex) {
             //Handle exceptions
             System.out.println("\n--Query did not execute--");
