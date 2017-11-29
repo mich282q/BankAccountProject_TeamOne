@@ -21,8 +21,8 @@ public class Main extends Application {
         Konto.insertKontoData();
 
 
-        //Konto saldo = new Konto();
-        //saldo.insertSaldoData(99999, 3652);
+        Konto saldo = new Konto();
+        saldo.insertSaldoData(99999, 3652);
 
 
         // Afslutter programmet efter testen er kørt

@@ -74,7 +74,7 @@ public class Konto {
             stmt = con.createStatement();
             //execute query
             stmt.executeUpdate(query);
-            System.out.println("\n--Transfered money: " + beloeb + "--");
+            System.out.println("\n--Transfered money: " + beloeb + "kr to register number: " + reg_nr + "--");
         } catch (SQLException ex) {
             //Handle exceptions
             System.out.println("\n--Query did not execute--");
