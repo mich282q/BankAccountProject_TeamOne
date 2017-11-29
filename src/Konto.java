@@ -79,10 +79,8 @@ public class Konto {
         //String query ="Update konto set saldo = " + beloeb + " where reg_nr = " + reg_nr;
         String query = "UPDATE konto set saldo = saldo + " + beloeb + " where konto_nr = " + konto_nr;
         String query2 = "UPDATE konto set saldo = saldo - " + beloeb + " where konto_nr = " + konto_nr2;
-
-
-
-
+        String query3 = "Insert into transactioner (Fra_Konto, Trukketbeløb, Til_kontoNr, Indførtbeløb) values " +
+                "("+konto_nr2+"," + -beloeb+","+ konto_nr+","+ beloeb+")";
 
 
         try {
@@ -91,10 +89,13 @@ public class Konto {
             //execute query
             stmt.executeUpdate(query);
             stmt.executeUpdate(query2);
+            stmt.executeUpdate(query3);
+
             System.out.println("\n--Overført penge: " + beloeb + "kr til reg. nummer: " + reg_nr +
                     " og kontonummer: " + konto_nr + "--");
             System.out.println("\n--Trukket penge: " + beloeb + "kr fra reg. nummer: " + reg_nr2 +
             " og kontonummer: " + konto_nr2 + "--");
+            System.out.println("\n--Lagt ind i transaktionslog--");
         } catch (SQLException ex) {
             //Handle exceptions
             System.out.println("\n--Query did not execute--");
